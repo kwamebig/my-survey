@@ -1,0 +1,189 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: url("https://thumbs.gfycat.com/CooperativeThirdAngora-max-1mb.gif") no-repeat center center; 
+}
+.links {
+  padding: 10px 10px 10px;
+}
+.links p {
+  display: inline-block;
+  list-style-type: none;
+  align-items: center;
+  justify-content: flex;
+}
+.links a {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+}
+.links a:hover {
+  color: forestgreen;
+  text-decoration: underline;
+}
+.survey {
+  max-width: 90vw; 
+  width: 490px;
+  border: .5px solid forestgreen;  
+  border-radius: 10px;  
+  margin-bottom: 60px; 
+}
+.free {
+  width: fit-content;
+  max-width: 90vw; 
+  display: inline-block;
+  display: float;
+  border: .2px solid forestgreen;
+  border-radius: 4px;
+  margin: 5px 0;
+  box-sizing: border-box; 
+  padding: 10px 10px;
+} 
+.checkbox, .radio{
+  height: 15px;
+  width: 15px;
+}
+.body-container {
+  font-family: 'Cardo', serif;
+  font-weight: 300;
+}
+.title {
+  color: forestgreen;
+ }
+h1, h2, h3, h4, h5, h6, .option-label, .tbl, .links, .title, .question-view {
+  font-family: 'Oswald', sans-serif;
+ }
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 45px;
+  color: rgb(12, 5, 6);
+  line-height: 115%;
+  max-width: 100%;
+  min-width: 0%;  
+}
+.main {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  padding: 24px;
+  padding-top: 24px;
+  padding-top: 22px;
+  position: relative; 
+}
+.question-view {
+  margin-bottom: 12px;
+  padding: 12px;
+  height: auto;
+  page-break-inside: avoid;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+.question-sub {
+  display: flex;
+  margin-bottom: 12px;
+  flex-direction: row;
+}
+.alert {
+  background-color: forestgreen;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  padding-right: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .1px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-left: 5px;
+  margin-top: 5px;
+  word-break: break-word;
+}
+.question-sub h4, .row h4, .question-view h4 {
+  font-size: 18px;
+  letter-spacing: .1px;
+  line-height: 24px;
+  font-weight: 500;
+  word-break: break-word;
+}
+.option {
+  /* display: flex;  */
+  display: inline-block; 
+  /* width: 35%;   */
+  margin: 5px 5px 5px 5px;
+  flex-grow: 1;
+  margin-bottom: 8px;
+}
+.option-label {
+  margin-top: 5px;
+  padding-left: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 20px;
+  min-width: 1px;
+}
+.save {
+  background-color: forestgreen;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .25px;
+  line-height: 35px;
+  text-transform: none;
+  text-align: center;
+  font-size: 17px; 
+}
+.to-stats {
+  color: forestgreen;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; 
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: .25px;
+  line-height: 35px;
+  text-transform: none;
+  text-align: center;
+  padding: 10px;
+  padding-top: 10px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.to-survey {
+  color: forestgreen;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; 
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: .25px;
+  line-height: 35px;
+  text-transform: none;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.pct {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  padding: 24px;
+  padding-top: 22px;
+  position: relative; 
+}
