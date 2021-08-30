@@ -1,5 +1,7 @@
 (ns proj0.answers-reader
-  (:require [cheshire.core :as cheshire]))
+  (:require [cheshire.core :as cheshire]
+            [clojure.set]
+            [clojure.walk]))
 
 (def survey-src 
   "https://gist.githubusercontent.com/kwamebig/103bed13417ed003a9c3cda2e164b96a/raw/796026d42ae121529e15c6dc075e6610312e2f11/survey.json")
