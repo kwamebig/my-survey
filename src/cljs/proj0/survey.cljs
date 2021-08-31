@@ -38,11 +38,14 @@
       "multiple-choice" [render-checkbox {:id id :question question :values values}])]])
 
 (defn read-text [id] (js/document.getElementById id))
-
 (defn read-radio [id] (js/document.querySelector (str ".main input[name='" id "']:checked")))
-
 (defn read-checkbox [id] (js/document.querySelectorAll (str ".main input[name='" id "']:checked")))
 
+(defn capitalize-words 
+  [s]
+  (->> (clojure.string/split (str s) #"\b") 
+       (map clojure.string/capitalize)
+       clojure.string/join))
 
 (defn read-answers [questions]
   (hash-map :answers
@@ -53,7 +56,7 @@
                               :answer
                               (case (:type question)
                                 "free-text" (when (seq (.-value (read-text id)))
-                                              (.-value (read-text id)))
+                                              (capitalize-words (.-value (read-text id))))
                                 "single-choice" (when (read-radio id)
                                                   (.-value (read-radio id)))
                                 "multiple-choice" (when (seq (read-checkbox id))
@@ -84,12 +87,12 @@
         [:form
          (for [question (:questions survey)]
            [question-template
-            {:key (:id question)
-             :id (:id question)
+            {:question (:question question)
              :type (:type question)
-             :question (:question question)
+             :values (:values question)
              :required (:required question)
-             :values (:values question)}])
+             :id (:id question)
+             :key (:id question)}])
          [:button.save
           {:on-click #(on-click (:questions survey))
            :type :reset}
